@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import java from "../public/java.png"
 import { Github, Linkedin, Mail, Phone, Code, Smartphone, GraduationCap, Briefcase, Lightbulb } from "lucide-react"
 import Image from "next/image"
 import calculator from "../public/Calculator.png"
@@ -163,7 +164,7 @@ export default function Component() {
 </Card>
 
             <Card className="group flex flex-col items-center p-6 bg-card hover:shadow-lg transition-shadow duration-300  hover:bg-green-500">
-  <img src="/java-icon.svg" alt="Java Logo" className="h-10 w-10 mb-3 group-hover:text-white" />
+  <Image src={java} alt="Java Logo" width={40} height={40} className="h-10 w-10 mb-3 group-hover:text-white" />
   <CardTitle className="text-lg font-semibold group-hover:text-white">Java</CardTitle>
 </Card>
 
@@ -310,21 +311,24 @@ export default function Component() {
               </form>
               <div className="flex justify-center gap-6 pt-4">
                 <Link
-                  href="mhassanshahid01@gmail.com"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  prefetch={false}
-                >
-                  <Mail className="h-8 w-8" />
-                  <span className="sr-only">Email</span>
-                </Link>
-                <Link
-                  href="+92 3324222627"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  prefetch={false}
-                >
-                  <Phone className="h-8 w-8" />
-                  <span className="sr-only">Phone</span>
-                </Link>
+  href="mailto:mhassanshahid01@gmail.com"
+  className="text-muted-foreground hover:text-primary transition-colors"
+  prefetch={false}
+>
+  <Mail className="h-8 w-8" />
+  <span className="sr-only">Email</span>
+</Link>
+               
+<Link
+  href="https://wa.me/923324222627"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+  prefetch={false}
+>
+  <Phone className="h-8 w-8" />
+  <span className="sr-only">WhatsApp</span>
+</Link>
                 <Link
                   href="https://github.com/hashcoder01"
                   target="_blank"
